@@ -117,7 +117,8 @@ var _hmt = _hmt || [];
                 <ul>
                     <li data-s="baidu" target="_blank"><i style="background-image: url(icon/baidu.svg);"></i>百度一下</li>
                     <li data-s="bing" target="_blank"><i style="background-image: url(icon/bing.svg);"></i>Bing</li>
-                    <li data-s="google" target="_blank"><i style="background-image: url(icon/g.svg);"></i>Google</li>
+	            <li data-s="duck" target="_blank"><i style="background-image: url(icon/bing.svg);"></i>Duck</li>
+   		     <li data-s="google" target="_blank"><i style="background-image: url(icon/g.svg);"></i>Google</li>
                     
                 </ul>
             </div>
@@ -143,6 +144,13 @@ var _hmt = _hmt || [];
                     $("form").attr('action', 'https://cn.bing.com/search');
                     $("form").submit();                   
                 } 
+		if (dt == "duck") {
+                    $(".wd").attr('name', 'q');
+                    $("form").attr('action', 'https://duckduckgo.com/?kl=cn-zh&amp;l=cn-zh');
+                    $("form").submit();                   
+                }     
+		    
+		    
               if (dt == "baidu") {
                   $("form").attr('action', 'https://www.baidu.com/s?ie=utf-8');
                   $("form").submit();                   
